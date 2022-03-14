@@ -1,0 +1,118 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  padding: 12px 4%;
+  font-size: 0.9rem;
+  color: white;
+  background: linear-gradient(to bottom, rgba(74,74,74, 0.6), rgba(0,0,0,0));
+  transition: background-color .3s ease-in-out;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  &--black {
+    background-color: #000;
+  }
+  &__burger {
+    cursor: pointer;
+    color: white;
+    margin-right: 1rem;
+    @media screen and (min-width: 850px) {
+      display: none;
+    }
+  }
+  &__logo {
+    max-width: 100px;
+  }
+  &__links {
+    margin-left: 20px;
+    transition: background-color .3s ease-in-out;
+    .nav__link {
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+    @media screen and (max-width: 849.98px) {
+      margin-left: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 110%;
+      right: 0;
+      .show & {
+        display: flex;
+        flex-direction: column;
+        visibility: visible;
+        width: 100%;
+        height: calc(100vh - 60px);
+        top: 50px;
+        background-color: black;
+      }
+      .nav__link {
+        font-size: 1.2rem;
+        padding: 15px 4%;
+      }
+    }
+  }
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex:1;
+    .nav__action {
+      margin-left: 10px;
+      @media screen and (min-width: 768px) {
+        margin-left: 20px;
+      }
+    }
+  }
+  &__notif--none {
+    display: none;
+  }
+  &__notif--show {
+    cursor: pointer;
+    position: absolute;
+    color: grey;
+    height: 10vh;
+    width: 350px;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid white;
+  }
+  &__profil {
+    &--none {
+      display: none;
+    }
+    &--show {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(0,0,0,0.95);
+      width: 160px;
+    }
+    &--border {
+      border-bottom: 1px solid grey;
+    }
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
+}
+.img__young {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
