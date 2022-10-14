@@ -7,7 +7,7 @@ function Video() {
   let { id } = useParams();
   console.log(id);
   return(
-    <div className="video">
+    <div className="video" data-testid="block-video">
     <iframe src={`https://www.youtube.com/embed/${id}`} title="video" frameBorder="0" allowFullscreen></iframe>
     </div>
   )
