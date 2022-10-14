@@ -68,10 +68,10 @@ function Nav() {
     <div className={`${hoverNotif ? "nav__notif--show" : "nav__notif--none"}`}>Aucune Notification récente</div>
     </div>
 
-    <a href="/" className="nav__action" onMouseEnter={profil} onMouseLeave={profil}><img src="./images/avatar.jpg"/></a>
+    <a href="/" className="nav__action" onMouseEnter={profil} onMouseLeave={profil}><img alt="avatar" src="./images/avatar.jpg"/></a>
     <div className={`${hoverProfil ? "nav__profil--show" : "nav__profil--none"}`}>
     <div className="nav__profil--border">
-    <a href="/" className="nav__links"><img src="./images/Jeunesse.png" className="img__young nav_icons"/>Jeunesse</a>
+    <a href="/" className="nav__links"><img src="./images/Jeunesse.png" className="img__young nav_icons" alt="Jeunesse"/>Jeunesse</a>
     <a href="/" className="nav__links"><EditIcon className="nav_icons"/>Gérer les profils</a>
     </div>
     <div className="nav__profil--border">
