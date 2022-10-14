@@ -42,26 +42,26 @@ function Nav() {
     </button>
     <img src="./images/logo.png" className="nav__logo" alt="Netflix"/>
     <nav className="nav__links">
-     <a href="/" className="nav__link">
+     <a href="/" className="nav__link" data-testid="nav-link">
      Accueil
      </a>
-     <a href="/" className="nav__link">
+     <a href="/" className="nav__link" data-testid="nav-link">
      Séries
      </a>
-     <a href="/" className="nav__link">
+     <a href="/" className="nav__link" data-testid="nav-link">
      Films
      </a>
-     <a href="/" className="nav__link">
+     <a href="/" className="nav__link" data-testid="nav-link">
      Nouveautés les plus regardées
      </a>
-     <a href="/" className="nav__link">
+     <a href="/" className="nav__link" data-testid="nav-link">
      Ma liste
      </a>
     </nav>
     <div className="nav__actions">
-    <a href="/" className="nav__action"><SearchIcon /></a>
-    <a href="/" className="nav__action">DIRECT</a>
-    <a href="/" className="nav__action">Jeunesse</a>
+    <a href="/" className="nav__action" data-testid="search"><SearchIcon /></a>
+    <a href="/" className="nav__action" data-testid="direct-btn">DIRECT</a>
+    <a href="/" className="nav__action" data-testid="youth-btn">Jeunesse</a>
 
     <div onMouseEnter={notif} onMouseLeave={notif}>
     <a href="/" className="nav__action nav__notifIcon"><NotificationsIcon /></a>

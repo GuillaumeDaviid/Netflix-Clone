@@ -45,13 +45,13 @@ function Banner() {
   return(
     <header className="banner" style={bannerStyle}>
     <div className="banner__content">
-    <h1 className="banner__title">{movie?.title || movie?.original_title || movie?.name}</h1>
-    <p className="banner__description">{truncateText(movie?.overview, 100)}</p>
+    <h1 className="banner__title" data-testid="movie-name">{movie?.title || movie?.original_title || movie?.name}</h1>
+    <p className="banner__description" data-testid="movie-description">{truncateText(movie?.overview, 100)}</p>
     <div className="banner__buttons">
     <Link to={`/video/${movie?.id}`}>
-    <button className="banner__button banner__button--play"><PlayArrowIcon/> Lecture</button>
+    <button className="banner__button banner__button--play" data-testid="btn-play"><PlayArrowIcon/> Lecture</button>
     </Link>
-    <button className="banner__button" onClick={handleClickPopup}>
+    <button className="banner__button" onClick={handleClickPopup} data-testid="btn-more">
     <HelpOutlineIcon />
     Plus d'infos</button>
     </div>
